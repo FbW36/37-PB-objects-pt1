@@ -134,4 +134,9 @@ console.log(newData);
 // { a: 1, b: 2, c: 3 } ➞ [["a", "b", "c"], [1, 2, 3]]
 // {key: true} ➞ [["key"], [true]]
 // Hint: Refer to Object.keys, Object.values, Object.entries, Object.fromEntries, Object.assign and Object.getOwnPropertyNames for these exercises.
-//no idea how to do it :s 
+function getKeysAndValues(obj) {
+  const keyArr = Object.keys(obj);
+  const valueArr = Object.values(obj);
+  return [keyArr, valueArr];
+}
+console.log(getKeysAndValues({ a: 1, b: 2, c: 3 }));
