@@ -4,7 +4,7 @@ const person = {
     lastName: "Faro",
 }
 
-console.log(person);
+console.log("1==>",person);
 
 //2
 function valuesArray (object){
@@ -12,7 +12,7 @@ function valuesArray (object){
     return valuesArray;
 }
 
-console.log(valuesArray(person));
+console.log("2==>",valuesArray(person));
 
 //3
 const pasta = {
@@ -21,7 +21,7 @@ const pasta = {
     vegetable: "artichoke and capers",
     cheese: "Parmigiano"
 }
-console.log(`Today we have ${pasta.pasta} with ${pasta.sauce} sauce, ${pasta.vegetable} and ${pasta.cheese} on top`);
+console.log("3==>",`Today we have ${pasta.pasta} with ${pasta.sauce} sauce, ${pasta.vegetable} and ${pasta.cheese} on top`);
 
 // BONUS 1
 const numbers = {
@@ -35,7 +35,7 @@ function objectArray(object){
     return objectArray;
 }
 
-console.log(objectArray(numbers));
+console.log("Bonus 1==>",objectArray(numbers));
 
 //BONUS 2
 const student = {
@@ -49,7 +49,7 @@ function objectProperties(object){
     return objectProperties;
 }
 
-console.log(objectProperties(student));
+console.log("Bonus 2==>",objectProperties(student));
 
 //BONUS 3
 let first = {firstName: "John"}
@@ -60,21 +60,25 @@ function merge(object1, object2){
     return merged;
 }
 
-console.log(merge(first, last));
+console.log("Bonus 3==>",merge(first, last));
 // It merges the last object in the code, changes both original objects. 
 
 //BONUS 4 
-let person2 = {
-    name: "John", 
-    job: "teacher"
+const newPerson = {
+    name: 'John', 
+    job: 'teacher',
 }
 
 function switchKeysValue(object){
-   const test = Object.keys(object); 
-   return test;
-}
+    const objectKeysArray = Object.keys(object); 
+    const newObject ={}
+    for(i=0; i<objectKeysArray.length; i++){
+        newObject[object[objectKeysArray[i]]] = objectKeysArray[i];
+    }
+    return newObject
+} 
 
-console.log(switchKeysValue(person2));
+console.log("Bonus 4==>",switchKeysValue(newPerson));
 
 //BONUS 5
 const numbers2 = {
@@ -89,4 +93,4 @@ function keysValues (object){
     return keysValue;   
 }
 
-console.log(keysValues(numbers2));
+console.log("Bonus 5==>",keysValues(numbers2));
