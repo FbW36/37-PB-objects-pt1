@@ -109,7 +109,24 @@ for (const [key, value] of Object.entries(person1)) {
 //and returns an array which contains two arrays: 
 //one for the keys of the object and the other for the values of the object.
 
+/*{ a: 1, b: 2, c: 3 } ➞ [["a", "b", "c"], [1, 2, 3]]
+{key: true} ➞ [["key"], [true]]*/
 
+/* @ciamac-da ciamac-da 4 hours ago Member
 
+Task 5 ==> So here you can use keys and values of Object methods 
+and store keys and values in variables and then you just need to 
+return them in an array [ key, value ] like this!
+*/
+
+const myObject ={
+   a: 1, b: 2, c: 3
+}
+let objectKeys= Object.keys(myObject)
+let objectValues =Object.values(myObject)
+
+let myArray = [objectKeys, objectValues]
+
+console.log("my Array of Keys and Values", myArray);
 
 
