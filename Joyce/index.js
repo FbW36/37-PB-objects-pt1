@@ -64,14 +64,16 @@ console.log(mergeObjects({ firstName: "John" }, { lastName: "Smith" }));
 // ==>Merge two objects with the same property values, the new object won't add two objects together, just one original object.
 
 // 4. Switch Keys and Values. Create a function to get a copy of an object. The copy must switch the keys and values.
-function switchKeysValues(object4) {
-  let KeysValues = {};
-  Object.keys(object4).forEach((key) => {
-    KeysValues[object4[key]] = key;
-  });
-  return KeysValues;
+
+function valueKeySwap1(object4) {
+  const objectArr1 = Object.entries(object4);
+  const objectSwap1 = [];
+  for (i = 0; i < objectArr1.length; i++) {
+    objectSwap1.push(objectArr1[i].reverse());
+  }
+  return Object.fromEntries(objectSwap1);
 }
-console.log(switchKeysValues({ name: "John", job: "teacher", age: 34 }));
+console.log(valueKeySwap1({ name: "Max", job: "dentist", city: "Berlin" }));
 
 // 5. Return Keys and Values. Write a program that takes an object and returns an array which contains two arrays: one for the keys of the object and the other for the values of the object.
 function returnKeysValues(object5) {
